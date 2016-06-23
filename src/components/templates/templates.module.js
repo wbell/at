@@ -1,0 +1,1 @@
+'use strict'; module.exports = angular.module('at.templatesModule', []).run(['$templateCache', function($templateCache) {$templateCache.put('./src/components/header/directives/header/header.html','<header><h1>Healthcare.gov</h1><nav><ul><li ng-repeat="item in navItems" ui-sref-active="is-active"><a ui-sref="{{item.state}}">{{item.label}}</a></li></ul></nav></header>');}]);

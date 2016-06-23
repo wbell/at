@@ -1,0 +1,10 @@
+<header>
+  <h1>Healthcare.gov</h1>
+  <nav>
+    <ul>
+      <li ng-repeat="item in navItems" ui-sref-active="is-active">
+        <a ui-sref="{{item.state}}">{{item.label}}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
