@@ -10,6 +10,10 @@ header.main
     float left
     padding 14px 0
 
+    a
+      text-decoration none
+      color $black
+
   nav
     float right
 
@@ -35,6 +39,10 @@ header.main
       cursor pointer
       font-size 0.9em
       text-shadow 0 1px 1px rgba($white, 0.8)
+      transition all 300ms
+
+      &:hover
+        background-color darken($lgrey, 5%)
 
     li.is-active a
       border-bottom-color $dgrey
