@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp watch",
-    "test": "mocha test"
+    "zip": "gulp zip",
+    "test": "lab -a code -v -t 90 -c -L"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,8 @@
     "browser-sync": "^2.13.0",
     "chai": "^3.5.0",
     "chai-spies": "^0.7.1",
+    "code": "^3.0.1",
+    "lab": "^10.8.2",
     "mocha": "^2.5.3"
   }
 }
