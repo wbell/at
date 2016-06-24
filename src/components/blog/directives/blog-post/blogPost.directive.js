@@ -9,7 +9,6 @@ var blogPostDir = function blogPostDir(){
     templateUrl: './src/components/blog/directives/blog-post/blogPost.html',
     controller: [
       '$scope',
-      '$sce',
       blogPostCtrl
     ],
     scope: {

@@ -1,0 +1,18 @@
+<div class="page-view glossary">
+  <header class="subheader">
+    <h2>Glossary</h2>
+    <div class="controls">
+      <div class="search">
+        <input type="text" placeholder="Search" ng-model="searchTerm">
+        <button type="button" ng-click="filterGlossary">OK</button>
+      </div>
+      <select ng-model="language.selected" ng-options="opt.value as opt.name for opt in language.options"></select>
+    </div>
+  </header>
+  <main>
+    <article class="glossary-item" ng-repeat="item in glossaryCollection | orderBy : 'title'" ng-show="(language.selected === '' || language.selected === item.lang)">
+      <h3>{{item.title}}</h3>
+      <div ng-bind-html="item.content"></div>
+    </article>
+  </main>
+</div>

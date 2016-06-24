@@ -30,7 +30,17 @@ var routes = function routes($stateProvider, $urlRouterProvider) {
     name: 'glossary',
     url: '/glossary',
     templateUrl: './src/components/glossary/views/glossary/glossary.html',
-    controller: 'at.glossaryModule.glossaryCtrl'
+    controller: 'at.glossaryModule.glossaryCtrl',
+    resolve: {
+      glossaryCollection: [
+        'at.apiModule.apiFactory',
+        function(api){
+          return api.get('glossary').then(function(response){
+            return response.data.glossary;
+          });
+        }
+      ]
+    }
   })
 
   // contact
