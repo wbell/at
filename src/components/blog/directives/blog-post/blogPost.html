@@ -1,0 +1,10 @@
+<article class="blog-post" ng-show="(lang === '' || lang === post.lang)">
+  <div class="header">
+    <div class="title">
+      <h3><a ng-href="https://healthcare.gov{{post.url}}" target="_blank">{{post.title}}</a></h3>
+      <span class="date">{{parseDate(post.date) | date : 'MM/dd/yyyy'}}</span>
+    </div>
+    <p class="categories"><span ng-if="post.lang==='en'">in</span><span ng-if="post.lang==='es'">en</span> {{post.categories.join(', ')}}</p>
+  </div>
+  <p class="description" ng-if="post['meta-description']">&quot;{{post['meta-description']}}&quot;</p>
+</article>
