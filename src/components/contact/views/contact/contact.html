@@ -1,0 +1,22 @@
+<div class="page-view contact">
+  <header class="subheader trans">
+    <h2>Contact Us</h2>
+  </header>
+  <main>
+    <form novalidate name="contactForm" ng-submit="submit(contactForm)">
+      <div class="row">
+        <input type="text" name="name" ng-model="contact.name" placeholder="Name" required ng-class="{invalid:contactForm.$submitted && contactForm.name.$invalid}">
+      </div>
+      <div class="row">
+        <input type="email" name="email" ng-model="contact.email" placeholder="Email Address" required ng-class="{invalid:contactForm.$submitted && contactForm.email.$invalid}">
+        <select name="reason" ng-model="contact.reason" ng-options="opt.code as opt.label for opt in reasons" required ng-class="{invalid:contactForm.$submitted && contactForm.reason.$invalid}"></select>
+      </div>
+      <div class="row">
+        <textarea name="message" ng-model="contact.message" placeholder="Message" required ng-class="{invalid:contactForm.$submitted && contactForm.message.$invalid}"></textarea>
+      </div>
+      <div class="row">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+</div>

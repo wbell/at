@@ -12,7 +12,7 @@ var appModule = angular.module('at', [
   require('./components/header/header.module'),     // header
   require('./components/blog/blog.module'),         // blog
   require('./components/glossary/glossary.module'), // glossary
-  // require('./components/contact/contact.module'),   // contact
+  require('./components/contact/contact.module'),   // contact
   'at.templatesModule'                              // templates
 ]);
 
