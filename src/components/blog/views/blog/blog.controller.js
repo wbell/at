@@ -3,23 +3,7 @@
 var blogCtrl = function blogCtrl($scope, blogCollection){
 
   // Language configuration
-  $scope.language = {
-    selected: '',
-    options: [
-      {
-        name: 'Language',
-        value: ''
-      },
-      {
-        name: 'English',
-        value: 'en'
-      },
-      {
-        name: 'Spanish',
-        value: 'es'
-      }
-    ]
-  };
+  $scope.language = {selected: ''};
 
   // populate blog items
   $scope.blogCollection = blogCollection;

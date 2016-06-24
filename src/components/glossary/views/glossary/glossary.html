@@ -6,7 +6,7 @@
         <input type="text" placeholder="Search" ng-model="searchTerm">
         <button type="button" ng-click="filterGlossary">OK</button>
       </div>
-      <select ng-model="language.selected" ng-options="opt.value as opt.name for opt in language.options"></select>
+      <at-lang-select model="language.selected"></at-lang-select>
     </div>
   </header>
   <main>

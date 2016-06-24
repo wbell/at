@@ -1,7 +1,7 @@
 <div class="page-view blog">
   <header class="subheader">
     <h2>Blog</h2>
-    <select ng-model="language.selected" ng-options="opt.value as opt.name for opt in language.options"></select>
+    <at-lang-select model="language.selected"></at-lang-select>
   </header>
   <main>
     <at-blog-post ng-repeat="post in blogCollection | orderBy: '-date'" post="post" lang="language.selected"></at-blog-post>
