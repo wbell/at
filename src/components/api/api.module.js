@@ -9,6 +9,7 @@ var apiFactory = require('./factories/api.factory');
 var moduleName = 'at.apiModule';
 var apiModule = angular.module(moduleName, []);
 
+// api factory
 apiModule.factory(moduleName + '.apiFactory', [
   '$http',
   apiFactory

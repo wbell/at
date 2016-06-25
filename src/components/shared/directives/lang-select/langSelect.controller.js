@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * controller for language select directive
+ * @param  {Object} $rootScope angular root scope service
+ * @param  {Object} $scope     angular scope service
+ */
 var langSelectCtrl = function langSelectCtrl($rootScope, $scope){
 
   // set model value based on stored rootscope value
@@ -23,7 +28,11 @@ var langSelectCtrl = function langSelectCtrl($rootScope, $scope){
     ]
   };
 
-  // model change listener
+  /**
+   * when model is changed, save the value to rootscope
+   * in order to persist the language selection
+   * across all views using this directive
+   */
   $scope.modelChanged = function(){
     $rootScope.selectedLanguage = $scope.model;
   };

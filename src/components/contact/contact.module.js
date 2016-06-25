@@ -9,6 +9,7 @@ var contactCtrl = require('./views/contact/contact.controller');
 var moduleName = 'at.contactModule';
 var contactModule = angular.module(moduleName, []);
 
+// contact view controller
 contactModule.controller(moduleName + '.contactCtrl', [
   '$scope',
   contactCtrl

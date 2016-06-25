@@ -2,9 +2,12 @@
 
 var angular = require('angular');
 
+// module components
 var routes = require('./app.routes');
 
-var appModule = angular.module('at', [
+// module
+var moduleName = 'at';
+var appModule = angular.module(moduleName, [
   require('angular-sanitize'),                      // sanitize
   require('angular-ui-router'),                     // ui router
   require('./components/shared/shared.module'),     // shared
@@ -16,10 +19,11 @@ var appModule = angular.module('at', [
   'at.templatesModule'                              // templates
 ]);
 
+// bind routes
 appModule.config([
   '$stateProvider',
   '$urlRouterProvider',
   routes
 ]);
 
-module.exports = appModule;
+module.exports = moduleName;

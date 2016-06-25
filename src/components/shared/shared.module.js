@@ -9,6 +9,7 @@ var langSelectDir = require('./directives/lang-select/langSelect.directive');
 var moduleName = 'at.sharedModule';
 var sharedModule = angular.module(moduleName, []);
 
+// language select directive
 sharedModule.directive('atLangSelect', langSelectDir);
 
 module.exports = moduleName;

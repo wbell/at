@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * controller for contact view
+ * @param  {Object} $scope angular scope service
+ */
 var contactCtrl = function contactCtrl($scope){
 
   // contact object
@@ -18,7 +22,11 @@ var contactCtrl = function contactCtrl($scope){
     {label: 'Website Feedback', code: 'WF'}
   ];
 
-  // submission action
+  /**
+   * submission action
+   * @param  {Object}  form        angular form object from the view
+   * @param  {Boolean} form.$valid property indicating validity of the form
+   */
   $scope.submit = function(form){
     if(form.$valid){
       alert('This form is valid');
