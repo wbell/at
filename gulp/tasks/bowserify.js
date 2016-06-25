@@ -8,7 +8,6 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('browserify', ['eslint', 'templates'], function() {
-
   var isProd = process.env.NODE_ENV === 'production';
 
   if (isProd) {
@@ -20,7 +19,7 @@ gulp.task('browserify', ['eslint', 'templates'], function() {
       transform: ['require-globify']
     })
     .bundle()
-    .pipe(source('app.js'))
+    .pipe(source('app.min.js'))
     .pipe(buffer())
     .pipe(uglify()) // pack
     .pipe(gulp.dest('./dist/js'));

@@ -40,4 +40,7 @@ jspm_packages
 dist
 
 # Compiled templates
-templates
+src/components/templates
+
+# Packaged zips
+packaged

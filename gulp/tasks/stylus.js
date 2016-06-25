@@ -6,6 +6,7 @@ var cssmin = require('gulp-cssmin');
 var jeet = require('jeet');
 var nib = require('nib');
 var sourcemaps = require('gulp-sourcemaps');
+var rename = require('gulp-rename');
 
 gulp.task('stylus', function() {
 
@@ -23,6 +24,7 @@ gulp.task('stylus', function() {
         'include css': true
       }))
       .pipe(cssmin())
+      .pipe(rename('app.min.css'))
       .pipe(gulp.dest('./dist/css'));
 
   } else {

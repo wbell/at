@@ -18,7 +18,7 @@ gulp.task('jade', function() {
   return gulp.src('./src/index.jade')
     .pipe(jade({
       locals: locals,
-      pretty: true
+      pretty: locals.env !== 'production'
     }))
     .pipe(gulp.dest('./dist'));
 
