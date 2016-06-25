@@ -26,7 +26,10 @@ gulp.task('watch', ['build'], function() {
   ], ['browserify']);
 
   gulp.watch([
-    './src/**/*.styl',
-    './src/components/**/*.styl'
+    './src/**/*.styl'
   ], ['stylus']);
+
+  gulp.watch([
+    './src/**/*.jade'
+  ], ['jade']);
 });

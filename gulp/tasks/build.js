@@ -2,4 +2,4 @@
 
 var gulp = require('gulp');
 
-gulp.task('build', ['stylus','browserify']);
+gulp.task('build', ['jade', 'stylus', 'browserify']);
